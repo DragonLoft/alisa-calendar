@@ -1,8 +1,8 @@
 // calendar.js
 let currentYear = 2026;
-let currentMonth = 9; // Октябрь (0-11)
+let currentMonth = 9; // РћРєС‚СЏР±СЂСЊ (0-11)
 
-const monthNames = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+const monthNames = ["РЇРЅРІР°СЂСЊ","Р¤РµРІСЂР°Р»СЊ","РњР°СЂС‚","РђРїСЂРµР»СЊ","РњР°Р№","РСЋРЅСЊ","РСЋР»СЊ","РђРІРіСѓСЃС‚","РЎРµРЅС‚СЏР±СЂСЊ","РћРєС‚СЏР±СЂСЊ","РќРѕСЏР±СЂСЊ","Р”РµРєР°Р±СЂСЊ"];
 
 function renderCalendar() {
   const grid = document.getElementById('calendar-grid');
@@ -30,7 +30,7 @@ function renderCalendar() {
       cell.classList.add('today');
     }
 
-    // КЛИК: только выделение и показ события. Настроение НЕ меняется.
+    // РљР›РРљ: С‚РѕР»СЊРєРѕ РІС‹РґРµР»РµРЅРёРµ Рё РїРѕРєР°Р· СЃРѕР±С‹С‚РёСЏ. РќР°СЃС‚СЂРѕРµРЅРёРµ РќР• РјРµРЅСЏРµС‚СЃСЏ.
     cell.addEventListener('click', () => {
         document.querySelectorAll('.day-cell').forEach(el => el.classList.remove('selected'));
         cell.classList.add('selected');
@@ -41,7 +41,7 @@ function renderCalendar() {
     grid.appendChild(cell);
   }
 
-  // Сразу после отрисовки расставляем маркеры праздников
+  // РЎСЂР°Р·Сѓ РїРѕСЃР»Рµ РѕС‚СЂРёСЃРѕРІРєРё СЂР°СЃСЃС‚Р°РІР»СЏРµРј РјР°СЂРєРµСЂС‹ РїСЂР°Р·РґРЅРёРєРѕРІ
   if (typeof window.applyHolidays === 'function') window.applyHolidays();
 }
 
