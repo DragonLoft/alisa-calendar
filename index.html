@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ДЗ СДЕЛАЛА???</title>
+  <title>Р”Р— РЎР”Р•Р›РђР›Рђ???</title>
   <link rel="stylesheet" href="CSScalendarMain.css">
 </head>
 <body>
   <div class="app-wrapper">
     <header class="app-header">
       <div class="header-title-row">
-        <a href="docs.html" class="help-btn" aria-label="Документация">?</a>
-        <h1>Лисалендарь</h1>
+        <a href="docs.html" class="help-btn" aria-label="Г„Г®ГЄГіГ¬ГҐГ­ГІГ Г¶ГЁГї">?</a>
+        <h1>Г‹ГЁГ±Г Г«ГҐГ­Г¤Г Г°Гј</h1>
       </div>
       <div class="month-nav">
-        <button id="prev-month" class="nav-btn">‹</button>
-        <span id="current-month-year">Октябрь 2026</span>
-        <button id="next-month" class="nav-btn">›</button>
+        <button id="prev-month" class="nav-btn">вЂ№</button>
+        <span id="current-month-year">ГЋГЄГІГїГЎГ°Гј 2026</span>
+        <button id="next-month" class="nav-btn">вЂє</button>
       </div>
     </header>
 
     <div class="weekdays">
-      <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
+      <span>ГЏГЌ</span><span>Г‚Г’</span><span>Г‘Гђ</span><span>Г—Г’</span><span>ГЏГ’</span><span>Г‘ГЃ</span><span>Г‚Г‘</span>
     </div>
 
     <div id="calendar-grid" class="calendar-grid"></div>
 
-    <!-- 1. НАСТРОЙ ДНЯ (Только для СЕГОДНЯ, не меняется при кликах) -->
+    <!-- 1. ГЌГЂГ‘Г’ГђГЋГ‰ Г„ГЌГџ (Г’Г®Г«ГјГЄГ® Г¤Г«Гї Г‘Г…ГѓГЋГ„ГЌГџ, Г­ГҐ Г¬ГҐГ­ГїГҐГІГ±Гї ГЇГ°ГЁ ГЄГ«ГЁГЄГ Гµ) -->
     <section id="mood-panel" class="panel">
-      <h3> Настрой дня... Настроился!</h3>
+      <h3> ГЌГ Г±ГІГ°Г®Г© Г¤Г­Гї... ГЌГ Г±ГІГ°Г®ГЁГ«Г±Гї!</h3>
       <div class="mood-content">
         <img id="mood-img" src="" alt="" class="mood-img hidden">
-        <p id="mood-text">Загрузка...</p>
+        <p id="mood-text">Г‡Г ГЈГ°ГіГ§ГЄГ ...</p>
       </div>
     </section>
 
-    <!-- 2. КАРТОЧКА СОБЫТИЯ (Появляется только при клике на дату с праздником) -->
+    <!-- 2. ГЉГЂГђГ’ГЋГ—ГЉГЂ Г‘ГЋГЃГ›Г’Г€Гџ (ГЏГ®ГїГўГ«ГїГҐГІГ±Гї ГІГ®Г«ГјГЄГ® ГЇГ°ГЁ ГЄГ«ГЁГЄГҐ Г­Г  Г¤Г ГІГі Г± ГЇГ°Г Г§Г¤Г­ГЁГЄГ®Г¬) -->
     <section id="event-panel" class="panel hidden">
-      <h3>А сёдня у нас...</h3>
+      <h3>ГЂ Г±ВёГ¤Г­Гї Гі Г­Г Г±...</h3>
       <div id="event-content"></div>
     </section>
   </div>
