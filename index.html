@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ДЗ СДЕЛАЛА???</title>
   <link rel="stylesheet" href="CSScalendarMain.css">
 </head>
-<body>
+<body>                                
   <div class="app-wrapper">
     <header class="app-header">
       <div class="header-title-row">
-        <a href="docs.html" class="help-btn" aria-label="Äîêóìåíòàöèÿ">?</a>
-        <h1>Ëèñàëåíäàðü</h1>
+        <a href="docs.html" class="help-btn" aria-label="Документация">?</a>
+        <h1>Лисалендарь</h1>
       </div>
       <div class="month-nav">
         <button id="prev-month" class="nav-btn">‹</button>
-        <span id="current-month-year">Îêòÿáðü 2026</span>
+        <span id="current-month-year">Октябрь 2026</span>
         <button id="next-month" class="nav-btn">›</button>
       </div>
     </header>
 
     <div class="weekdays">
-      <span>ÏÍ</span><span>ÂÒ</span><span>ÑÐ</span><span>×Ò</span><span>ÏÒ</span><span>ÑÁ</span><span>ÂÑ</span>
+      <span>ПН</span><span>ВТ</span><span>СР</span><span>ЧТ</span><span>ПТ</span><span>СБ</span><span>ВС</span>
     </div>
 
     <div id="calendar-grid" class="calendar-grid"></div>
 
-    <!-- 1. ÍÀÑÒÐÎÉ ÄÍß (Òîëüêî äëÿ ÑÅÃÎÄÍß, íå ìåíÿåòñÿ ïðè êëèêàõ) -->
+    <!-- 1. НАСТРОЙ ДНЯ (Только для СЕГОДНЯ, не меняется при кликах) -->
     <section id="mood-panel" class="panel">
-      <h3> Íàñòðîé äíÿ... Íàñòðîèëñÿ!</h3>
+      <h3> Настрой дня... Настроился!</h3>
       <div class="mood-content">
         <img id="mood-img" src="" alt="" class="mood-img hidden">
-        <p id="mood-text">Çàãðóçêà...</p>
+        <p id="mood-text">Загрузка...</p>
       </div>
     </section>
 
-    <!-- 2. ÊÀÐÒÎ×ÊÀ ÑÎÁÛÒÈß (Ïîÿâëÿåòñÿ òîëüêî ïðè êëèêå íà äàòó ñ ïðàçäíèêîì) -->
+    <!-- 2. КАРТОЧКА СОБЫТИЯ (Появляется только при клике на дату с праздником) -->
     <section id="event-panel" class="panel hidden">
-      <h3>À ñ¸äíÿ ó íàñ...</h3>
+      <h3>А сёдня у нас...</h3>
       <div id="event-content"></div>
     </section>
   </div>
