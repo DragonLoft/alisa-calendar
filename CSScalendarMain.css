@@ -1,18 +1,18 @@
 /* =========================================
-   CSScalendarMain.css | Полный сброс стилей
-   Стиль: Минимализм (Тёмная база)
+   CSScalendarMain.css | ГЏГ®Г«Г­Г»Г© Г±ГЎГ°Г®Г± Г±ГІГЁГ«ГҐГ©
+   Г‘ГІГЁГ«Гј: ГЊГЁГ­ГЁГ¬Г Г«ГЁГ§Г¬ (Г’ВёГ¬Г­Г Гї ГЎГ Г§Г )
    ========================================= */
 
-/* 1. CSS ПЕРЕМЕННЫЕ (Тема по умолчанию) */
+/* 1. CSS ГЏГ…ГђГ…ГЊГ…ГЌГЌГ›Г… (Г’ГҐГ¬Г  ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ) */
 :root {
   --bg-primary: #121212;
   --bg-secondary: #1e1e1e;
   --bg-surface: #2c2c2c;
   --text-primary: #e0e0e0;
   --text-secondary: #a0a0a0;
-  --accent: #4a90e2;       /* Синий для акцентов/выделения */
+  --accent: #4a90e2;       /* Г‘ГЁГ­ГЁГ© Г¤Г«Гї Г ГЄГ¶ГҐГ­ГІГ®Гў/ГўГ»Г¤ГҐГ«ГҐГ­ГЁГї */
   --accent-hover: #357abd;
-  --birthday: #f5c518;     /* Тёплый жёлтый для дней рождения */
+  --birthday: #f5c518;     /* Г’ВёГЇГ«Г»Г© Г¦ВёГ«ГІГ»Г© Г¤Г«Гї Г¤Г­ГҐГ© Г°Г®Г¦Г¤ГҐГ­ГЁГї */
   --border: #333333;
   --shadow: 0 4px 12px rgba(0,0,0,0.4);
   --radius: 14px;
@@ -24,11 +24,17 @@
   --space-lg: 24px;
 }
 
-/* 2. СБРОС И БАЗА */
+/* 2. Г‘ГЃГђГЋГ‘ Г€ ГЃГЂГ‡ГЂ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--bg-primary);
+  background-color: var(--bg-primary);
+  background-image: var(--bg-image, none);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
   color: var(--text-primary);
   font-family: var(--font-main);
   line-height: 1.5;
@@ -45,7 +51,7 @@ body {
   padding-bottom: var(--space-lg);
 }
 
-/* 3. ШАПКА И НАВИГАЦИЯ */
+/* 3. ГГЂГЏГЉГЂ Г€ ГЌГЂГ‚Г€ГѓГЂГ–Г€Гџ */
 .header-title-row {
   position: relative;
   display: flex;
@@ -100,7 +106,7 @@ body {
 .nav-btn:hover { color: var(--accent); }
 #current-month-year { font-weight: 500; font-size: 1.05rem; }
 
-/* 4. ДНИ НЕДЕЛИ И СЕТКА */
+/* 4. Г„ГЌГ€ ГЌГ…Г„Г…Г‹Г€ Г€ Г‘Г…Г’ГЉГЂ */
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -139,13 +145,13 @@ body {
 .day-cell:active { transform: scale(0.96); }
 .day-cell.other-month { opacity: 0.3; pointer-events: none; }
 
-/* Текущий день */
+/* Г’ГҐГЄГіГ№ГЁГ© Г¤ГҐГ­Гј */
 .day-cell.today {
   border: 2px solid var(--accent);
   font-weight: 600;
 }
 
-/* Выбранный день (клик) */
+/* Г‚Г»ГЎГ°Г Г­Г­Г»Г© Г¤ГҐГ­Гј (ГЄГ«ГЁГЄ) */
 .day-cell.selected {
   background: var(--accent);
   color: #fff;
@@ -153,7 +159,7 @@ body {
 }
 .day-cell.selected::after { background: #fff !important; }
 
-/* Маркер события (точка снизу) */
+/* ГЊГ Г°ГЄГҐГ° Г±Г®ГЎГ»ГІГЁГї (ГІГ®Г·ГЄГ  Г±Г­ГЁГ§Гі) */
 .day-cell.has-event::after {
   content: '';
   width: 6px; height: 6px;
@@ -164,7 +170,7 @@ body {
   pointer-events: none;
 }
 
-/* День рождения (Жёлтый) */
+/* Г„ГҐГ­Гј Г°Г®Г¦Г¤ГҐГ­ГЁГї (Г†ВёГ«ГІГ»Г©) */
 .day-cell.birthday {
   background: rgba(237, 202, 24, 0.12);
   border-color: var(--birthday);
@@ -179,7 +185,7 @@ body {
   font-size: 0.7rem;
 }
 
-/* 5. ПАНЕЛИ (Настрой и События) */
+/* 5. ГЏГЂГЌГ…Г‹Г€ (ГЌГ Г±ГІГ°Г®Г© ГЁ Г‘Г®ГЎГ»ГІГЁГї) */
 .panel {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -196,7 +202,7 @@ body {
   letter-spacing: 0.04em;
 }
 
-/* Блок настроения */
+/* ГЃГ«Г®ГЄ Г­Г Г±ГІГ°Г®ГҐГ­ГЁГї */
 .mood-content {
   display: flex;
   align-items: center;
@@ -213,7 +219,7 @@ body {
 .mood-img.hidden { display: none; }
 .mood-text { flex: 1; font-size: 0.95rem; line-height: 1.4; }
 
-/* Блок выбранного события */
+/* ГЃГ«Г®ГЄ ГўГ»ГЎГ°Г Г­Г­Г®ГЈГ® Г±Г®ГЎГ»ГІГЁГї */
 .event-card {
   display: flex;
   flex-direction: column;
@@ -225,7 +231,7 @@ body {
 .event-card h4 { margin: 0 0 var(--space-xs); color: var(--text-primary); font-size: 1.1rem; }
 .event-card p { margin: 0; color: var(--text-secondary); font-size: 0.85rem; }
 
-/* 6. УТИЛИТЫ И АДАПТИВ */
+/* 6. Г“Г’Г€Г‹Г€Г’Г› Г€ ГЂГ„ГЂГЏГ’Г€Г‚ */
 .hidden { display: none !important; }
 
 @media (min-width: 481px) {
