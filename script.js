@@ -1,4 +1,80 @@
 // script.js
+// ==========================================
+// 🎨 ДВИЖОК СЛУЧАЙНЫХ ТЕМ (Каркас)
+// ==========================================
+const foxThemes = [
+    {
+        name: "Дефолт",
+        vars: {
+            "--bg-primary": "#121212",
+            "--bg-secondary": "#1e1e1e",
+            "--bg-surface": "#2c2c2c",
+            "--text-primary": "#e0e0e0",
+            "--text-secondary": "#a0a0a0",
+            "--accent": "#4a90e2",       // Синий акцент
+            "--birthday": "#f5c518"      // Жёлтый для ДР
+        }
+    },
+    {
+        name: "Уютная Осень",
+        vars: {
+            "--bg-primary": "#2d1b14",       // Тёмно-коричневый
+            "--bg-secondary": "#4a2c20",
+            "--bg-surface": "#5c3a2a",
+            "--text-primary": "#f5e6d3",     // Тёплый бежевый
+            "--text-secondary": "#d4b49a",
+            "--accent": "#e67e22",           // Оранжевый акцент
+            "--birthday": "#f1c40f"
+        }
+    },
+    {
+        name: "Vocaloid Miku Style", // Специально для Алисы!
+        vars: {
+            "--bg-primary": "#1a2b3c",       // Глубокий тёмно-бирюзовый
+            "--bg-secondary": "#243b4d",
+            "--bg-surface": "#2e4c5e",
+            "--text-primary": "#e0ffff",     // Светло-бирюзовый текст
+            "--text-secondary": "#88ccee",
+            "--accent": "#39c5bb",           // Фирменный цвет Мику!
+            "--birthday": "#ff69b4"          // Розовый для ДР
+        }
+    },
+    {
+        name: "Снежная Лиса",
+        vars: {
+            "--bg-primary": "#f0f4f8",       // Светлая тема!
+            "--bg-secondary": "#d9e2ec",
+            "--bg-surface": "#ffffff",
+            "--text-primary": "#102a43",
+            "--text-secondary": "#486581",
+            "--accent": "#334e68",
+            "--birthday": "#e67e22"
+        }
+    }
+];
+
+// Функция применения случайной темы
+function applyRandomTheme() {
+    // Выбираем случайный индекс от 0 до длины массива
+    const randomIndex = Math.floor(Math.random() * foxThemes.length);
+    const chosenTheme = foxThemes[randomIndex];
+    
+    console.log(`Применена тема: ${chosenTheme.name}`);
+    
+    // Проходим по всем переменным и применяем их к корню документа (:root)
+    for (const [key, value] of Object.entries(chosenTheme.vars)) {
+        document.documentElement.style.setProperty(key, value);
+    }
+}
+
+// Запускаем применение темы СРАЗУ, до загрузки остального контента
+applyRandomTheme();
+
+// ==========================================
+// ДАЛЕЕ ИДУТ ТВОИ ДАННЫЕ (holidaysData и т.д.)
+// ==========================================
+
+
 // Данные вшиты для надёжности
 const holidaysData = [
     { "month": 10, "day": 6,  "title": "День рождения Алисы",        "type": "birthday", "emoji": "" },
