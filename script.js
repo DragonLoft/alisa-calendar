@@ -11,10 +11,90 @@ const foxThemes = [
             "--bg-surface": "#2c2c2c",
             "--text-primary": "#e0e0e0",
             "--text-secondary": "#a0a0a0",
-            "--accent": "#4a90e2",       // Синий акцент
+            "--accent": "#6366f1",
             "--birthday": "#f5c518"      // Жёлтый для ДР
         }
     },
+
+
+
+
+    
+
+    // ==========================================
+// 🎨 ТВОИ ЗАГОТОВКИ ТЕМ (Раскомментируй нужную)
+// ==========================================
+
+/* 
+{
+  name: "🌙 Ночная Лиса (Классика)",
+  vars: {
+    "--bg-primary": "#0f1115",
+    "--bg-surface": "#1a1d24",
+    "--text-primary": "#e2e8f0",
+    "--accent": "#6366f1",        // Фиолетово-синий
+    "--birthday": "#f59e0b"       // Янтарный для ДР
+  }
+}
+*/
+
+/* 
+{
+  name: " Уютное Кафе (Тёплая)",
+  vars: {
+    "--bg-primary": "#2c241b",
+    "--bg-surface": "#3d3225",
+    "--text-primary": "#f3e5d8",
+    "--text-secondary": "#c4a882",
+    "--accent": "#d97706",        // Тёплый оранжевый
+    "--border": "#5c4a3a",
+    "--birthday": "#ef4444"
+  }
+}
+*/
+
+/* 
+{
+  name: " Только моё фото (цвета не трогаем)",
+  vars: {
+    "--bg-image": "url('photo.jpg')" 
+    // Если фото светлое → раскомментируй строки ниже:
+    // "--bg-overlay": "rgba(255,255,255,0.8)",
+    // "--text-primary": "#111827",
+    // "--text-secondary": "#4b5563"
+  }
+}
+*/
+
+/* 
+{
+  name: "🌸 Сакура (Нежная светлая)",
+  vars: {
+    "--bg-primary": "#fdf2f8",
+    "--bg-surface": "#ffffff",
+    "--text-primary": "#1f2937",
+    "--text-secondary": "#6b7280",
+    "--accent": "#ec4899",        // Розовый
+    "--birthday": "#f43f5e",
+    "--border": "#fce7f3",
+    "--bg-overlay": "rgba(255, 255, 255, 0.6)" // Лёгкая дымка
+  }
+}
+*/
+/*
+    {
+  name: "Моё фото (все цвета по умолчанию)",
+  vars: {
+    "--bg-image": "url('my-fox-photo.jpg')" // Файл должен лежать рядом с index.html
+  }
+},
+
+*/
+
+
+
+    
+    
     {
         name: "Уютная Осень",
         vars: {
@@ -27,6 +107,7 @@ const foxThemes = [
             "--birthday": "#f1c40f"
         }
     },
+    
     {
         name: "Vocaloid Miku Style", // Специально для Алисы!
         vars: {
@@ -39,6 +120,18 @@ const foxThemes = [
             "--birthday": "#ff69b4"          // Розовый для ДР
         }
     },
+    
+    {
+  name: "Фото 1",
+  vars: {
+    "--bg-image": "url('photo1.jpg')" 
+    // Если фото светлое → раскомментируй строки ниже:
+    // "--bg-overlay": "rgba(255,255,255,0.8)",
+    // "--text-primary": "#111827",
+    // "--text-secondary": "#4b5563"
+  }
+},
+    
     {
         name: "Снежная Лиса",
         vars: {
